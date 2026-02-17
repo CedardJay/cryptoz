@@ -24,6 +24,12 @@
             <a href="#" class="sign-in">Sign in</a>
             <a href="#" class="get-started">Get started</a>
         </div>
+
+        <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <section class="hero">
@@ -34,30 +40,38 @@
                 <input type="email" class="email-input" placeholder="Email Address...">
                 <button class="get-started">Get started</button>
             </div>
+
             <div class="converter">
                 <h2>Currency Converter</h2>
-                  <p>Amount</p>
+                <p class="label">Amount</p>
                 <div class="input-group">
-                    <select>
-                        <option value="GBP">GBP</option>
+                    <select id="base-currency">
                         <option value="USD">USD</option>
+                        <option value="AUD">AUD</option>
+                        <option value="EUR">EUR</option>
                     </select>
-                    <input type="text" value="0.0088">
+                    <input type="number" value="1.0">
                 </div>
-                   <p>Converted to</p>
+                <p class="label">Converted to</p>
+                <div style="color: rgb(247, 4, 4);" id="error-message"></div>
                 <div class="input-group">
-                    <select>
+                    <select id="target-currency">
+                        <option value="EUR">EUR</option>
                         <option value="AUD">AUD</option>
                         <option value="USD">USD</option>
                     </select>
-                    <input type="text" value="0.0088">
+                    <input type="number" value="">
                 </div>
-                  <p>Date</p>
+                <p class="label">Date</p>
                 <div class="date">
-                    <input type="date" value="2024-05-01">
+                    <input id="currentDate" type="date" value="2024-05-01">
                 </div>
                 <p>EUR GBP BTC</p>
             </div>
+        </div>
+        <div class="floating-icons">
+            <img class="blur-bit" src="images/Coin/BitCoin/Cam2.png" alt="">
+            <img class="blur-eth" src="images/Coin/Ethereum/Cam1.png" alt="">
         </div>
     </section>
 
@@ -74,27 +88,28 @@
             <div class="number">99K</div>
             <div class="label">People have joined</div>
         </div>
+        <div class="line"></div>
         <div class="stat-item">
             <div class="number">50K</div>
             <div class="label">VVIP users have joined</div>
         </div>
+        <div class="line"></div>
         <div class="stat-item">
             <div class="number">100+</div>
             <div class="label">Big Companies have joined</div>
         </div>
     </div>
 
-
     <div class="trusted">
         <div class="textcontent">
-            <h1>The Most Trusted  Cryptocurrency  Platform</h1>
-            <ul>
+            <h1>The Most Trusted Cryptocurrency Platform</h1>
+            <ul class="list">
                 <li>
                     <span>01</span>
                     <div>
                         <h2>Sync between platforms</h2>
-                        <p>No matter if you're using our web interface or <br> mobile app — your data is always
-                            synced.Just <br> one account for all our services.</p>
+                        <p>No matter if you're using our web interface or mobile app — your data is always
+                            synced. <br> Just one account for all our services.</p>
                     </div>
                 </li>
                 <li>
@@ -113,13 +128,15 @@
                 </li>
             </ul>
         </div>
-        <div class="mockup">
-            <img src="images/lessons.png" alt="App Mockup" class="phone">
+        <div class="phones">
+            <img class="phone" src="images/lessons.png" alt="App Mockup">
         </div>
     </div>
 
+
     <section class="starting">
         <div class="started">
+
             <div class="cards-top">
                 <div class="left">
                     <div class="card blue">
@@ -127,50 +144,55 @@
                             <img src="images/Frame 8754.png" alt="">
                         </div>
                         <div class="text">
-                            <h2>Create portfolio <br>today</h2>
-                            <p>Buy and sell popular digital currencies, keep track of them <br> in the one place. Has a
-                                variety of features that make it the <br> best place to start trading.</p>
+                            <h2>Create portfolio today</h2>
+                            <p>Buy and sell popular digital currencies, keep track of them in the one place. <br>
+                                Has a
+                                variety of features that make it the best place to start trading.</p>
                         </div>
                     </div>
                 </div>
                 <div class="right">
                     <div class="card yellow">
                         <div class="image">
-                            <img src="images/Frame 8755.png" alt="">
+                            <img style="width: 230Px; height: auto;" src="images/Frame 8755.png" alt="">
                         </div>
                         <div class="text">
-                            <h2>Lightning-Fast <br> Crypto Trading</h2>
-                            <p>The Exchange supports USD, EUR, and GBP. <br> Invest in cryptocurrency slowly over time
-                                by <br>
-                                scheduling
+                            <h2>Lightning-Fast Crypto Trading</h2>
+                            <p>The Exchange supports USD, EUR, and GBP. Invest in cryptocurrency slowly over time
+                                by scheduling
                                 buys
                                 daily, weekly, or monthly.</p>
                         </div>
                     </div>
                     <div class="card pink">
                         <div class="image">
-                            <img src="images/Frame 8756.png" alt="">
+                            <img style="width: 230px; height: auto;" src="images/Frame 8756.png" alt="">
                         </div>
                         <div class="text">
-                            <h2>Security From <br> Day One</h2>
-                            <p>Safety, security and compliance. Buy and sell <br> popular digital currencies, keep track
+                            <h2>Security From Day One</h2>
+                            <p>Safety, security and compliance. Buy and sell popular digital currencies, keep track
                                 of
                                 them
-                                in <br> one place.</p>
+                                in one place.</p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="get-start">
-                <h1>Get Started in Just <br> Few Minute</h1>
-                <p>Has a variety of features that make it the best place to start trading</p>
+                <div class="head-text">
+                    <h1>Get Started in Just <br> Few Minute</h1>
+                    <p>Has a variety of features that make it the best place to start trading</p>
+                </div>
                 <div class="cards-bottom">
                     <div class="card-bottom">
                         <img src="images/Frame 219.png" alt="Sign Up Icon">
                         <h3>Sign Up</h3>
-                        <p>Buy Bitcoin or Ethereum, then securely store it in your wallet or send it easily to friends
+                        <p>Buy Bitcoin or Ethereum, then securely store it in your wallet or send it easily to
+                            friends
                         </p>
                     </div>
+
                     <div class="card-bottom">
                         <img src="images/Frame 220.png" alt="Fund Icon">
                         <h3>Fund</h3>
@@ -178,6 +200,7 @@
                             wallet
                         </p>
                     </div>
+
                     <div class="card-bottom">
                         <img src="images/Frame 221.png" alt="Buy Crypto Icon">
                         <h3>Buy Crypto</h3>
@@ -185,128 +208,216 @@
                             profile
                         </p>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </section>
 
+
     <div class="wrapper">
         <section class="testimonials-section">
             <h2>What people are saying</h2>
-            <div class="testimonials-grid">
-                <!-- Repeat this card -->
-                <div class="testimonial-card">
-                    <div class="user-info">
-                        <img src="https://i.pravatar.cc/50?img=1" alt="User" class="avatar">
-                        <div>
-                            <h4>John Doe</h4>
-                            <p class="title">CEO Motion Design Agency</p>
+            <div class="grid-container">
+                <div class="testimonials-grid">
+                    <!-- Repeat this card -->
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/jane.png" alt="User" class="avatar">
+                            <div>
+                                <h4>Lewis Johnson</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
                         </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua."
+                        </p>
                     </div>
-                    <p class="message">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do orem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    </p>
-                </div>
-                <!-- Add more testimonial cards as needed -->
-                <div class="testimonial-card">
-                    <div class="user-info">
-                        <img src="https://i.pravatar.cc/50?img=2" alt="User" class="avatar">
-                        <div>
-                            <h4>Jane Smith</h4>
-                            <p class="title">CTO Design Studio</p>
-                        </div>
-                    </div>
-                    <p class="message">
-                        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo
-                        consequat."
-                    </p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="user-info">
-                        <img src="https://i.pravatar.cc/50?img=1" alt="User" class="avatar">
-                        <div>
-                            <h4>John Doe</h4>
-                            <p class="title">CEO Motion Design Agency</p>
-                        </div>
-                    </div>
-                    <p class="message">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua."
-                    </p>
-                </div>
 
-                <div class="testimonial-card">
-                    <div class="user-info">
-                        <img src="https://i.pravatar.cc/50?img=1" alt="User" class="avatar">
-                        <div>
-                            <h4>John Doe</h4>
-                            <p class="title">CEO Motion Design Agency</p>
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/john.jpeg" alt="User" class="avatar">
+                            <div>
+                                <h4>John Doe</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
                         </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do orem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        </p>
                     </div>
-                    <p class="message">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua."
-                    </p>
-                </div>
 
-                <div class="testimonial-card">
-                    <div class="user-info">
-                        <img src="https://i.pravatar.cc/50?img=1" alt="User" class="avatar">
-                        <div>
-                            <h4>John Doe</h4>
-                            <p class="title">CEO Motion Design Agency</p>
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/jane.png" alt="User" class="avatar">
+                            <div>
+                                <h4>Jamila lennon</h4>
+                                <p class="title">CTO Design Studio</p>
+                            </div>
                         </div>
+                        <p class="message">
+                            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo
+                            consequat."
+                        </p>
                     </div>
-                    <p class="message">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua."
-                    </p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="user-info">
-                        <img src="https://i.pravatar.cc/50?img=1" alt="User" class="avatar">
-                        <div>
-                            <h4>John Doe</h4>
-                            <p class="title">CEO Motion Design Agency</p>
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/john.jpeg" alt="User" class="avatar">
+                            <div>
+                                <h4>Peter William</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
                         </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua."
+                        </p>
                     </div>
-                    <p class="message">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua."
-                    </p>
-                </div>
 
-                <div class="testimonial-card">
-                    <div class="user-info">
-                        <img src="https://i.pravatar.cc/50?img=1" alt="User" class="avatar">
-                        <div>
-                            <h4>John Doe</h4>
-                            <p class="title">CEO Motion Design Agency</p>
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/john.jpeg" alt="User" class="avatar">
+                            <div>
+                                <h4>Elon Mark</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
                         </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua."
+                        </p>
                     </div>
-                    <p class="message">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua."
-                    </p>
-                </div>
 
-                <!-- Duplicate or generate more cards here -->
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/john.jpeg" alt="User" class="avatar">
+                            <div>
+                                <h4>Samuel Jackson</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
+                        </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/john.jpeg" alt="User" class="avatar">
+                            <div>
+                                <h4>Lucas Endrick</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
+                        </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/john.jpeg" alt="User" class="avatar">
+                            <div>
+                                <h4>Adams Martin</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
+                        </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/jane.png" alt="User" class="avatar">
+                            <div>
+                                <h4>Jenifer Mike</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
+                        </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do orem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/jane.png" alt="User" class="avatar">
+                            <div>
+                                <h4>Jane Smith</h4>
+                                <p class="title">CTO Design Studio</p>
+                            </div>
+                        </div>
+                        <p class="message">
+                            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo
+                            consequat."
+                        </p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/jane.png" alt="User" class="avatar">
+                            <div>
+                                <h4>Ruth Emy</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
+                        </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="images/jane.png" alt="User" class="avatar">
+                            <div>
+                                <h4>walker Jane</h4>
+                                <p class="title">CEO Motion Design Agency</p>
+                            </div>
+                        </div>
+                        <p class="message">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua."
+                        </p>
+                    </div>
+                    <!-- Duplicate or generate more cards here -->
+                </div>
             </div>
         </section>
     </div>
 
     <div class="banner">
         <div class="banner-content">
-            <h1>Take your first step into safe,<br> secure crypto investing</h1>
+            <h1>Take your first step into safe, secure crypto investing</h1>
             <button>Get started</button>
         </div>
         <div class="crypto-icons">
@@ -378,9 +489,13 @@
                 <div class="logo-image"><img src="images/nexo-(nexo).svg" alt="logo"></div>
                 <div class="logo-text">CryptoZ</div>
             </div>
-            <p>© Design by AmarachI Iwuzee. All rights reserved.</p>
+            <p>© Design by Douanla Cedard. All rights reserved.</p>
         </div>
     </footer>
+
+
+    <script src="main.js">
+    </script>
 </body>
 
 </html>
