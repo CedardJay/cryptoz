@@ -25,7 +25,7 @@ const baseCurrencySelect = document.getElementById('base-currency');
 const targetCurrencySelect = document.getElementById('target-currency');
 const amountInput = document.querySelector('.input-group input[type="number"]');
 const convertedInput = document.querySelectorAll('.input-group input[type="number"]')[1];
-
+const errorMessage = document.getElementById('error-message');
 // Cache exchange rate to reduce the number of api  calls
 let exchangeRates = {};
 
@@ -45,7 +45,8 @@ async function fetchExchangeRate(base, target) {
         return data.exchange_rates[target];
     } catch (error) {
         console.error('Error fetching exchange rate:', error);
-        document.getElementById('error-message').innerHTML = "An error occured. Please try again"
+        errorMessage.innerHTML = "Error Fetching exchange rate. Please try again";
+        convertedInput.value = '0.0000';
         //alert('Error fetching exchange rate. Please try again.');
         return null;
     }
@@ -56,7 +57,7 @@ async function convertCurrency() {
     const baseCurrency = baseCurrencySelect.value;
     const targetCurrency = targetCurrencySelect.value;
     const amount = parseFloat(amountInput.value);
-
+    errorMessage.innerHTML = "";
     // Validate input
     if (isNaN(amount) || amount <= 0) {
         convertedInput.value = '0.0000';
