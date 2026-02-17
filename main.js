@@ -19,6 +19,8 @@ const today = new Date().toISOString().split('T')[0];
 document.getElementById('currentDate').value = today;
 
 
+
+
 //Currency Converter
 // Get DOM elements
 const baseCurrencySelect = document.getElementById('base-currency');
@@ -26,7 +28,52 @@ const targetCurrencySelect = document.getElementById('target-currency');
 const amountInput = document.querySelector('.input-group input[type="number"]');
 const convertedInput = document.querySelectorAll('.input-group input[type="number"]')[1];
 const errorMessage = document.getElementById('error-message');
-// Cache exchange rate to reduce the number of api  calls
+
+
+//Currency Array
+const currencies = [
+  "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN",
+  "BAM", "BBD", "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BRL",
+  "BSD", "BTN", "BWP", "BYN", "BZD", "CAD", "CDF", "CHF", "CLP", "CNY",
+  "COP", "CRC", "CUP", "CVE", "CZK", "DJF", "DKK", "DOP", "DZD", "EGP",
+  "ERN", "ETB", "EUR", "FJD", "FKP", "GBP", "GEL", "GHS", "GIP", "GMD",
+  "GNF", "GTQ", "GYD", "HKD", "HNL", "HRK", "HTG", "HUF", "IDR", "ILS",
+  "INR", "IQD", "IRR", "ISK", "JMD", "JOD", "JPY", "KES", "KGS", "KHR",
+  "KMF", "KPW", "KRW", "KWD", "KYD", "KZT", "LAK", "LBP", "LKR", "LRD",
+  "LSL", "LYD", "MAD", "MDL", "MGA", "MKD", "MMK", "MNT", "MOP", "MRU",
+  "MUR", "MVR", "MWK", "MXN", "MYR", "MZN", "NAD", "NGN", "NIO", "NOK",
+  "NPR", "NZD", "OMR", "PAB", "PEN", "PGK", "PHP", "PKR", "PLN", "PYG",
+  "QAR", "RON", "RSD", "RUB", "RWF", "SAR", "SBD", "SCR", "SDG", "SEK",
+  "SGD", "SHP", "SLL", "SOS", "SRD", "STN", "SYP", "SZL", "THB", "TJS",
+  "TMT", "TND", "TOP", "TRY", "TTD", "TWD", "TZS", "UAH", "UGX", "USD",
+  "UYU", "UZS", "VES", "VND", "VUV", "WST", "XAF", "XCD", "XOF", "XPF",
+  "YER", "ZAR", "ZMW", "ZWL"
+];
+
+function populateCurrencies() {
+  currencies.forEach(currency => {
+    const option1 = document.createElement('option');
+    option1.value = currency;
+    option1.textContent = currency;
+
+    const option2 = document.createElement('option');
+    option2.value = currency;
+    option2.textContent = currency;
+
+    baseCurrencySelect.appendChild(option1);
+    targetCurrencySelect.appendChild(option2);
+  });
+
+  // Set default values
+  baseCurrencySelect.value = 'USD';
+  targetCurrencySelect.value = 'EUR';
+}
+
+populateCurrencies();
+
+
+
+// Exchange rate cache to reduce the number of api  calls
 let exchangeRates = {};
 
 // Fetch exchange rate from API
@@ -102,4 +149,5 @@ baseCurrencySelect.addEventListener('change', convertCurrency);
 targetCurrencySelect.addEventListener('change', convertCurrency);
 
 // Initial conversion
+populateCurrencies();
 convertCurrency();
